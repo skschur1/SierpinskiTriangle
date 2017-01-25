@@ -52,7 +52,7 @@ public void sierpinski(int x, int y, int len, int min)
 }
 public void danger()
 {
-	fill(255,0,0);
+	fill(Math.random()*256,Math.random()*256,Math.random()*256);
 	text("I WARNED YOU!", (float)Math.random()*600, (float) Math.random()*700);
 	danger();
 }
