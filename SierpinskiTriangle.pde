@@ -21,8 +21,11 @@ public void draw()
 	rect(20, 20, 50, 50);
 	fill(0);
 	text("Don't\nClick", 35, 40);
-	if (mousePressed && get(mouseX,mouseY)== color(255,1,1))
+	if (mousePressed && mouseX >20 && mouseX < 70 && mouseY > 20 && mouseY < 70)
+	{
+		noLoop();
 		danger();
+	}
 }
 public void mousePressed()
 {
