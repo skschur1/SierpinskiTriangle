@@ -17,6 +17,12 @@ public void draw()
 	sierpinski(0, 600, 600, (int)sq((float)((int)((controlX - 55)/50)+1))); 
 	if (slider && mouseX > 60 && mouseX < 540)
 		controlX = mouseX - 5;
+	fill(255,1,1);
+	rect(20, 20, 50, 50);
+	fill(0);
+	text("Don't\nClick", 35, 40);
+	if (mousePressed && get(mouseX,mouseY)== color(255,1,1))
+		danger();
 }
 public void mousePressed()
 {
@@ -40,4 +46,10 @@ public void sierpinski(int x, int y, int len, int min)
 		sierpinski(x + len/2, y, len/2, min);
 		sierpinski(x + len/4, y - len/2, len/2, min);
 	}
+}
+public void danger()
+{
+	stroke(255,0,0);
+	text("I WARNED YOU!", (float)Math.random()*600, (float) Math.random()*700);
+	danger();
 }
