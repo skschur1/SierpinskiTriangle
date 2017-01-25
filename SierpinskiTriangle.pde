@@ -21,7 +21,7 @@ public void draw()
 	rect(20, 20, 50, 50);
 	fill(0);
 	text("Don't\nClick", 35, 40);
-	if (mousePressed && mouseX >20 && mouseX < 70 && mouseY > 20 && mouseY < 70)
+	if ((mousePressed && mouseX >20 && mouseX < 70 && mouseY > 20 && mouseY < 70)|| keyPressed)
 	{
 		noLoop();
 		danger();
@@ -52,7 +52,7 @@ public void sierpinski(int x, int y, int len, int min)
 }
 public void danger()
 {
-	stroke(255,0,0);
+	fill(255,0,0);
 	text("I WARNED YOU!", (float)Math.random()*600, (float) Math.random()*700);
 	danger();
 }
