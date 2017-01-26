@@ -3,6 +3,7 @@ boolean slider = false;
 public void setup()
 {
 	size(600,700);
+	frameRate(15);
 }
 public void draw()
 {
@@ -54,7 +55,5 @@ public void danger()
 {
 	fill((float)Math.random()*256,(float)Math.random()*256,(float)Math.random()*256);
 	text("I WARNED YOU!", (float)Math.random()*600, (float) Math.random()*700);
-	danger();
-	danger();
 	danger();
 }
